@@ -26,7 +26,7 @@ Then point your web browser to [http://localhost:5000/](http://localhost:5000/)
 For API documentation see [http://project-osrm.org/docs/v5.5.4/api/](http://project-osrm.org/docs/v5.5.4/api/)
 
 ## Graph Profiles
-The graph profile will default to `car`. Passing the `OSRM_GRAPH_PROFILE` environment variable allows other profiles to be set:
+The graph profile will default to `car`. Other profiles can be specified with the `OSRM_GRAPH_PROFILE` environment variable:
 ```bash
 docker run -d -p 5000:5000 \
 -e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' \
@@ -34,6 +34,15 @@ docker run -d -p 5000:5000 \
 --name osrm-backend peterevans/osrm-backend:latest
 ```
 Available profiles are `car`,`bicycle` and `foot`.
+
+## Data Storage Location
+By default the graph will be built and stored at the path `/osrm-data`. A custom path can be specified with the `OSRM_DATA_PATH` environment variable. Note that the path should NOT contain a trailing slash (`/`).
+```bash
+docker run -d -p 5000:5000 \
+-e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' \
+-e OSRM_DATA_PATH='/my-custom-path' \
+--name osrm-backend peterevans/osrm-backend:latest
+```
 
 ## Persistent Storage
 For a solution to persisting graph data and immutable deployments check out [osrm-backend for Kubernetes](https://github.com/peter-evans/osrm-backend-k8s).
