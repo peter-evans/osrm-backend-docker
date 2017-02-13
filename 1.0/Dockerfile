@@ -13,6 +13,7 @@ RUN apt-get -y update \
     build-essential \
     cmake \
     curl \
+    ca-certificates \
     libbz2-dev \
     libstxxl-dev \
     libstxxl1v5 \
