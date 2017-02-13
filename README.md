@@ -1,6 +1,8 @@
 # osrm-backend-docker
 Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://github.com/Project-OSRM/osrm-backend).
 
+[![](https://images.microbadger.com/badges/image/peterevans/osrm-backend.svg)](https://microbadger.com/images/peterevans/osrm-backend "Get your own image badge on microbadger.com")
+
 ## Supported tags and respective `Dockerfile` links
 
 - [`1.0.0`, `1.0`, `latest`  (*1.0/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.0)
