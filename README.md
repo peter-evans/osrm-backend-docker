@@ -5,7 +5,8 @@ Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://g
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.0.0`, `1.0`, `latest`  (*1.0/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.0)
+- [`1.1.0`, `1.1`, `latest`  (*1.1/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.1)
+- [`1.0.0`, `1.0` (*1.0/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.0)
 
 ## Usage
 Pass the `OSRM_PBF_URL` environment variable to the container referencing the URL of your PBF file:
