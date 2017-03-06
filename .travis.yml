@@ -10,5 +10,6 @@ before_script:
 
 script:
   - docker ps | grep -q osrm-backend
+  - ./tests/wait-for-http.sh localhost 5000
   - newman run tests/osrm_backend.postman_collection.json
   
