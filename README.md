@@ -6,7 +6,8 @@ Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://g
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.1.4`, `1.1`, `latest`  (*1.1/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.1)
+- [`1.2.0`, `1.2`, `latest`  (*1.2/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.2)
+- [`1.1.4`, `1.1` (*1.1/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.1)
 - [`1.0.0`, `1.0` (*1.0/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.0)
 
 ## Usage
@@ -25,7 +26,7 @@ docker logs -f <CONTAINER ID>
 ```
 Then point your web browser to [http://localhost:5000/](http://localhost:5000/)
 
-For API documentation see [http://project-osrm.org/docs/v5.6.0/api/](http://project-osrm.org/docs/v5.6.0/api/)
+For API documentation see [http://project-osrm.org/docs/v5.6.4/api/](http://project-osrm.org/docs/v5.6.4/api/)
 
 ## Graph Profiles
 The graph profile will default to `car`. Other profiles can be specified with the `OSRM_GRAPH_PROFILE` environment variable:
