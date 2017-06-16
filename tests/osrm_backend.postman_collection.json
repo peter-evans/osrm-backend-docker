@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:5000/route/v1/car/73.539603,1.935541;73.534974,1.897450?alternatives=false&overview=false",
+			"name": "OSRM Backend Route Service",
 			"event": [
 				{
 					"listen": "test",
@@ -24,7 +24,33 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:5000/route/v1/car/73.539603,1.935541;73.534974,1.897450?alternatives=false&overview=false",
+				"url": {
+					"raw": "{{base-url}}/route/v1/car/73.539603,1.935541;73.534974,1.897450?alternatives=false&overview=false",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"route",
+						"v1",
+						"car",
+						"73.539603,1.935541;73.534974,1.897450"
+					],
+					"query": [
+						{
+							"key": "alternatives",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "overview",
+							"value": "false",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -33,7 +59,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:5000/nearest/v1/car/73.539603,1.935541",
+			"name": "OSRM Backend Nearest Service",
 			"event": [
 				{
 					"listen": "test",
@@ -49,7 +75,7 @@
 				}
 			],
 			"request": {
-				"url": "http://localhost:5000/nearest/v1/car/73.539603,1.935541",
+				"url": "{{base-url}}/nearest/v1/car/73.539603,1.935541",
 				"method": "GET",
 				"header": [],
 				"body": {},
