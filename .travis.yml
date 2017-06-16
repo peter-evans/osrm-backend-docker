@@ -13,8 +13,8 @@ before_script:
 script:
   - docker ps | grep -q osrm-backend-xenial
   - ./tests/wait-for-http.sh http://localhost:5000/nearest/v1/healthz/0,0
-  - newman run tests/osrm_backend.postman_collection.json -e osrm-backend-xenial.postman_environment.json
+  - newman run tests/osrm_backend.postman_collection.json -e tests/osrm-backend-xenial.postman_environment.json
   - docker ps | grep -q osrm-backend-trusty
   - ./tests/wait-for-http.sh http://localhost:5001/nearest/v1/healthz/0,0
-  - newman run tests/osrm_backend.postman_collection.json -e osrm-backend-trusty.postman_environment.json
+  - newman run tests/osrm_backend.postman_collection.json -e tests/osrm-backend-trusty.postman_environment.json
   
