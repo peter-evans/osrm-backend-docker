@@ -2,14 +2,19 @@ services:
   - docker
 
 install:
-  - docker build -t osrm-backend ./1.2
-  - docker run -d -p 5000:5000 -e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' --name osrm-backend osrm-backend
-
+  - docker build -t osrm-backend:xenial ./1.2
+  - docker run -d -p 5000:5000 -e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' --name osrm-backend-xenial osrm-backend:xenial
+  - docker build -t osrm-backend:trusty ./1.2/trusty
+  - docker run -d -p 5001:5000 -e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' --name osrm-backend-trusty osrm-backend:trusty
+  
 before_script:
   - npm install newman --global
 
 script:
-  - docker ps | grep -q osrm-backend
+  - docker ps | grep -q osrm-backend-xenial
   - ./tests/wait-for-http.sh http://localhost:5000/nearest/v1/healthz/0,0
-  - newman run tests/osrm_backend.postman_collection.json
+  - newman run tests/osrm_backend.postman_collection.json -e tests/osrm-backend-xenial.postman_environment.json
+  - docker ps | grep -q osrm-backend-trusty
+  - ./tests/wait-for-http.sh http://localhost:5001/nearest/v1/healthz/0,0
+  - newman run tests/osrm_backend.postman_collection.json -e tests/osrm-backend-trusty.postman_environment.json
   
