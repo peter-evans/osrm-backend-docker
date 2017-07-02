@@ -2,7 +2,7 @@ FROM ubuntu:xenial
 
 MAINTAINER Peter Evans <pete.evans@gmail.com>
 
-ENV OSRM_VERSION 5.8.0
+ENV OSRM_VERSION 5.8.1
 
 # Let the container know that there is no TTY
 ENV DEBIAN_FRONTEND noninteractive
