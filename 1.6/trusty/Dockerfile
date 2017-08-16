@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 
 MAINTAINER rollbrettler <rollbrettler@googlemail.com>
 
-ENV OSRM_VERSION 5.11.0-rc.1
+ENV OSRM_VERSION 5.11.0-rc.2
 
 # Let the container know that there is no TTY
 ENV DEBIAN_FRONTEND noninteractive
