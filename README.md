@@ -33,7 +33,7 @@ docker logs -f <CONTAINER ID>
 ```
 Then point your web browser to [http://localhost:5000/](http://localhost:5000/)
 
-For API documentation see [http://project-osrm.org/docs/v5.9.1/api/](http://project-osrm.org/docs/v5.9.1/api/)
+For API documentation see [http://project-osrm.org/docs/v5.10.0/api/](http://project-osrm.org/docs/v5.10.0/api/)
 
 ## Graph Profiles
 The graph profile will default to `car`. Other profiles can be specified with the `OSRM_GRAPH_PROFILE` environment variable:
