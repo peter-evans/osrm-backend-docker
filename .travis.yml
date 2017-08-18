@@ -2,9 +2,9 @@ services:
   - docker
 
 install:
-  - docker build -t osrm-backend:xenial ./1.5
+  - docker build -t osrm-backend:xenial ./1.6
   - docker run -d -p 5000:5000 -e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' --name osrm-backend-xenial osrm-backend:xenial
-  - docker build -t osrm-backend:trusty ./1.5/trusty
+  - docker build -t osrm-backend:trusty ./1.6/trusty
   - docker run -d -p 5001:5000 -e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' --name osrm-backend-trusty osrm-backend:trusty
   
 before_script:
