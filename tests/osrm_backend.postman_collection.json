@@ -25,14 +25,14 @@
 			],
 			"request": {
 				"url": {
-					"raw": "{{base-url}}/route/v1/car/73.539603,1.935541;73.534974,1.897450?alternatives=false&overview=false",
+					"raw": "{{base-url}}/route/v1/profile/73.539603,1.935541;73.534974,1.897450?alternatives=false&overview=false",
 					"host": [
 						"{{base-url}}"
 					],
 					"path": [
 						"route",
 						"v1",
-						"car",
+						"profile",
 						"73.539603,1.935541;73.534974,1.897450"
 					],
 					"query": [
@@ -75,7 +75,7 @@
 				}
 			],
 			"request": {
-				"url": "{{base-url}}/nearest/v1/car/73.539603,1.935541",
+				"url": "{{base-url}}/nearest/v1/profile/73.539603,1.935541",
 				"method": "GET",
 				"header": [],
 				"body": {},

@@ -6,18 +6,18 @@ Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://g
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.6.0`, `1.6`, `latest`  (*1.6/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.6)
-- [`1.6.0-trusty`, `1.6-trusty`, `trusty`  (*1.6/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.6/trusty)
+- [`1.7.0`, `1.7`, `latest`  (*1.7/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.7)
+- [`1.7.0-trusty`, `1.7-trusty`, `trusty`  (*1.7/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.7/trusty)
+- [`1.6.0`, `1.6` (*1.6/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.6)
+- [`1.6.0-trusty`, `1.6-trusty` (*1.6/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.6/trusty)
 - [`1.5.0`, `1.5` (*1.5/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.5)
 - [`1.5.0-trusty`, `1.5-trusty` (*1.5/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.5/trusty)
 - [`1.4.2`, `1.4` (*1.4/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.4)
 - [`1.4.2-trusty`, `1.4-trusty` (*1.4/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.4/trusty)
 - [`1.3.1`, `1.3` (*1.3/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.3)
 - [`1.3.1-trusty`, `1.3-trusty` (*1.3/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.3/trusty)
-- [`1.2.4`, `1.2` (*1.2/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.2)
-- [`1.2.4-trusty`, `1.2-trusty` (*1.2/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.2/trusty)
-- [`1.1.4`, `1.1` (*1.1/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.1)
-- [`1.0.0`, `1.0` (*1.0/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.0)
+
+For earlier versions check the repository and the available [tags on Docker Hub](https://hub.docker.com/r/peterevans/osrm-backend/tags/).
 
 ## Usage
 Pass the `OSRM_PBF_URL` environment variable to the container referencing the URL of your PBF file:
@@ -46,6 +46,15 @@ docker run -d -p 5000:5000 \
 --name osrm-backend peterevans/osrm-backend:latest
 ```
 Available profiles are `car`,`bicycle` and `foot`.
+
+## Custom Graph Profiles
+The URL to a custom graph profile can be passed via the `OSRM_GRAPH_PROFILE_URL` environment variable. If this variable is set it will override any profile set by `OSRM_GRAPH_PROFILE`.
+```bash
+docker run -d -p 5000:5000 \
+-e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' \
+-e OSRM_GRAPH_PROFILE_URL='https://raw.githubusercontent.com/peter-evans/osrm-backend-docker/master/tests/car.lua' \
+--name osrm-backend peterevans/osrm-backend:latest
+```
 
 ## Data Storage Location
 By default the graph will be built and stored at the path `/osrm-data`. A custom path can be specified with the `OSRM_DATA_PATH` environment variable. Note that the path should NOT contain a trailing slash (`/`).
