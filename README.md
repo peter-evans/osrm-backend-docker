@@ -48,7 +48,7 @@ docker run -d -p 5000:5000 \
 Available profiles are `car`,`bicycle` and `foot`.
 
 ## Custom Graph Profiles
-A URL for a custom graph profile can be passed via the `OSRM_GRAPH_PROFILE_URL` environment variable. If this variable is set it will override any profile set by `OSRM_GRAPH_PROFILE`.
+The URL to a custom graph profile can be passed via the `OSRM_GRAPH_PROFILE_URL` environment variable. If this variable is set it will override any profile set by `OSRM_GRAPH_PROFILE`.
 ```bash
 docker run -d -p 5000:5000 \
 -e OSRM_PBF_URL='http://download.geofabrik.de/asia/maldives-latest.osm.pbf' \
