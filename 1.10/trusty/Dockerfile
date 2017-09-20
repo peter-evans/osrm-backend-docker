@@ -11,7 +11,6 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y update \
  && apt-get install -y software-properties-common \
  && add-apt-repository ppa:ubuntu-toolchain-r/test \
- && add-apt-repository ppa:george-edison55/cmake-3.x \
  && apt-get update \
  && apt-get install -y -qq --no-install-recommends \
     g++-6 \
