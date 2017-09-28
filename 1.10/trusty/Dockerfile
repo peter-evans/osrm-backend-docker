@@ -2,7 +2,7 @@ FROM ubuntu:trusty
 
 MAINTAINER rollbrettler <rollbrettler@googlemail.com>
 
-ENV OSRM_VERSION 5.13.0-cardinal.1
+ENV OSRM_VERSION 5.13.0-beta.1
 
 # Let the container know that there is no TTY
 ENV DEBIAN_FRONTEND noninteractive
@@ -44,7 +44,7 @@ ENV RANLIB=gcc-ranlib-4.9
 # Build osrm-backend
 RUN mkdir /osrm-src \
  && cd /osrm-src \
- && curl --silent -L https://github.com/Project-OSRM/osrm-backend/archive/v$OSRM_VERSION.tar.gz -o v$OSRM_VERSION.tar.gz \
+ && curl --silent -L https://github.com/peter-evans/osrm-backend/archive/v$OSRM_VERSION.tar.gz -o v$OSRM_VERSION.tar.gz \
  && tar xzf v$OSRM_VERSION.tar.gz \
  && cd osrm-backend-$OSRM_VERSION \
  && mkdir build \
