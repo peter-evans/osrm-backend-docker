@@ -6,18 +6,18 @@ Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://g
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.9.0`, `1.9`, `latest`  (*1.9/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.9)
-- [`1.9.0-trusty`, `1.9-trusty`, `trusty`  (*1.9/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.9/trusty)
+- [`1.10.0`, `1.10`, `latest`  (*1.10/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.10)
+- [`1.10.0-trusty`, `1.10-trusty`, `trusty`  (*1.10/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.10/trusty)
+- [`1.9.0`, `1.9` (*1.9/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.9)
+- [`1.9.0-trusty`, `1.9-trusty` (*1.9/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.9/trusty)
 - [`1.8.0`, `1.8` (*1.8/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.8)
 - [`1.8.0-trusty`, `1.8-trusty` (*1.8/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.8/trusty)
 - [`1.7.0`, `1.7` (*1.7/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.7)
 - [`1.7.0-trusty`, `1.7-trusty` (*1.7/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.7/trusty)
 - [`1.6.0`, `1.6` (*1.6/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.6)
 - [`1.6.0-trusty`, `1.6-trusty` (*1.6/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.6/trusty)
-- [`1.5.0`, `1.5` (*1.5/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.5)
-- [`1.5.0-trusty`, `1.5-trusty` (*1.5/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.5/trusty)
 
-For earlier versions check the repository and the available [tags on Docker Hub](https://hub.docker.com/r/peterevans/osrm-backend/tags/).
+For earlier versions see [releases](https://github.com/peter-evans/osrm-backend-docker/releases) and the available [tags on Docker Hub](https://hub.docker.com/r/peterevans/osrm-backend/tags/).
 
 ## Usage
 Pass the `OSRM_PBF_URL` environment variable to the container referencing the URL of your PBF file:
