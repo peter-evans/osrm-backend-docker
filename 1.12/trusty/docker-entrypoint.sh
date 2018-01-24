@@ -6,6 +6,7 @@ OSRM_DATA_LABEL=${OSRM_DATA_LABEL:="data"}
 OSRM_GRAPH_PROFILE=${OSRM_GRAPH_PROFILE:="car"}
 OSRM_GRAPH_PROFILE_URL=${OSRM_GRAPH_PROFILE_URL:=""}
 OSRM_PBF_URL=${OSRM_PBF_URL:="http://download.geofabrik.de/asia/maldives-latest.osm.pbf"}
+OSRM_MAX_TABLE_SIZE=${OSRM_MAX_TABLE_SIZE:="8000"}
 
 
 _sig() {
@@ -33,6 +34,6 @@ osrm-extract $OSRM_DATA_PATH/$OSRM_DATA_LABEL.osm.pbf -p $OSRM_GRAPH_PROFILE_PAT
 osrm-contract $OSRM_DATA_PATH/$OSRM_DATA_LABEL.osrm
 
 # Start serving requests
-osrm-routed $OSRM_DATA_PATH/$OSRM_DATA_LABEL.osrm --max-table-size 1000 &
+osrm-routed $OSRM_DATA_PATH/$OSRM_DATA_LABEL.osrm --max-table-size $OSRM_MAX_TABLE_SIZE &
 child=$!
 wait "$child"
