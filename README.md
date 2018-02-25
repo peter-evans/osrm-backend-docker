@@ -6,8 +6,8 @@ Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://g
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.12.2`, `1.12`, `latest`  (*1.12/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.12)
-- [`1.12.2-trusty`, `1.12-trusty`, `trusty`  (*1.12/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.12/trusty)
+- [`1.12.3`, `1.12`, `latest`  (*1.12/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.12)
+- [`1.12.3-trusty`, `1.12-trusty`, `trusty`  (*1.12/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.12/trusty)
 - [`1.11.3`, `1.11` (*1.11/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.11)
 - [`1.11.3-trusty`, `1.11-trusty` (*1.11/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.11/trusty)
 - [`1.10.0`, `1.10` (*1.10/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.10)
