@@ -16,7 +16,7 @@ RUN apt-get -y update \
     g++-6 \
     gcc-6 \
     build-essential \
-    cmake \
+    cmake3 \
     curl \
     ca-certificates \
     libbz2-dev \
