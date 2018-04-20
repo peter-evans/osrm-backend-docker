@@ -6,16 +6,16 @@ Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://g
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.13.7`, `1.13`, `latest`  (*1.13/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.13)
-- [`1.13.7-trusty`, `1.13-trusty`, `trusty`  (*1.13/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.13/trusty)
+- [`1.14.0`, `1.14`, `latest`  (*1.14/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.14)
+- [`1.14.0-trusty`, `1.14-trusty`, `trusty`  (*1.14/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.14/trusty)
+- [`1.13.7`, `1.13` (*1.13/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.13)
+- [`1.13.7-trusty`, `1.13-trusty` (*1.13/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.13/trusty)
 - [`1.12.3`, `1.12` (*1.12/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.12)
 - [`1.12.3-trusty`, `1.12-trusty` (*1.12/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.12/trusty)
 - [`1.11.3`, `1.11` (*1.11/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.11)
 - [`1.11.3-trusty`, `1.11-trusty` (*1.11/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.11/trusty)
 - [`1.10.0`, `1.10` (*1.10/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.10)
 - [`1.10.0-trusty`, `1.10-trusty` (*1.10/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.10/trusty)
-- [`1.9.0`, `1.9` (*1.9/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.9)
-- [`1.9.0-trusty`, `1.9-trusty` (*1.9/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.9/trusty)
 
 For earlier versions see [releases](https://github.com/peter-evans/osrm-backend-docker/releases) and the available [tags on Docker Hub](https://hub.docker.com/r/peterevans/osrm-backend/tags/).
 
