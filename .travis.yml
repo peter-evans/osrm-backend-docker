@@ -3,14 +3,13 @@ services:
 
 env:
   global:
-    - RELEASE_VERSION=1.18
     - OSRM_PBF_URL="http://download.geofabrik.de/asia/maldives-latest.osm.pbf"
 
 install:
-  - docker build -t osrm-backend:xenial ./$RELEASE_VERSION
+  - docker build -t osrm-backend:xenial .
   - docker run -d -p 5000:5000 -e OSRM_PBF_URL=$OSRM_PBF_URL --name osrm-backend-xenial osrm-backend:xenial
   - docker run -d -p 5001:5000 -e OSRM_PBF_URL=$OSRM_PBF_URL -e OSRM_GRAPH_PROFILE='bicycle' --name osrm-backend-bicycle osrm-backend:xenial
-  - docker build -t osrm-backend:trusty ./$RELEASE_VERSION/trusty
+  - docker build -t osrm-backend:trusty ./trusty
   - docker run -d -p 5010:5000 -e OSRM_PBF_URL=$OSRM_PBF_URL --name osrm-backend-trusty osrm-backend:trusty
 
 before_script:
@@ -19,7 +18,7 @@ before_script:
 script:
   - docker ps | grep -q osrm-backend-xenial
   - ./tests/wait-for-http.sh http://localhost:5000/nearest/v1/healthz/0,0
-  - newman run tests/osrm_backend.postman_collection.json -e tests/osrm-backend-xenial.postman_environment.json
+  - newman run tests/osrm_backend.postman_collection.json -e tests/osrm-backend.postman_environment.json
   - docker ps | grep -q osrm-backend-bicycle
   - ./tests/wait-for-http.sh http://localhost:5001/nearest/v1/healthz/0,0
   - newman run tests/osrm_backend.postman_collection.json -e tests/osrm-backend-bicycle.postman_environment.json
