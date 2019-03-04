@@ -1,27 +1,22 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 
-MAINTAINER rollbrettler <rollbrettler@googlemail.com>
+MAINTAINER Peter Evans <pete.evans@gmail.com>
 
-ENV OSRM_VERSION 5.22.0
+ENV OSRM_VERSION 5.21.0
 
 # Let the container know that there is no TTY
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Install packages
 RUN apt-get -y update \
- && apt-get install -y software-properties-common \
- && add-apt-repository ppa:ubuntu-toolchain-r/test \
- && apt-get update \
  && apt-get install -y -qq --no-install-recommends \
-    g++-6 \
-    gcc-6 \
     build-essential \
-    cmake3 \
+    cmake \
     curl \
     ca-certificates \
     libbz2-dev \
     libstxxl-dev \
-    libstxxl1 \
+    libstxxl1v5 \
     libxml2-dev \
     libzip-dev \
     libboost-all-dev \
@@ -38,13 +33,6 @@ RUN apt-get -y update \
  && pip install -U crcmod \ 
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /tmp/* /var/tmp/*
-
-ENV CPP=cpp-6
-ENV CC=gcc-6
-ENV CXX=g++-6
-ENV AR=gcc-ar-4.9
-ENV NM=gcc-nm-4.9
-ENV RANLIB=gcc-ranlib-4.9
 
 # Build osrm-backend
 RUN mkdir /osrm-src \
