@@ -6,16 +6,16 @@ Docker image for the Open Source Routing Machine (OSRM) [osrm-backend](https://g
 
 ## Supported tags and respective `Dockerfile` links
 
-- [`1.18.0`, `1.18`, `latest`  (*1.18/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.18)
-- [`1.18.0-trusty`, `1.18-trusty`, `trusty`  (*1.18/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.18/trusty)
-- [`1.17.0`, `1.17` (*1.17/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.17)
-- [`1.17.0-trusty`, `1.17-trusty` (*1.17/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.17/trusty)
-- [`1.16.0`, `1.16` (*1.16/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.16)
-- [`1.16.0-trusty`, `1.16-trusty` (*1.16/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.16/trusty)
-- [`1.15.1`, `1.15` (*1.15/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.15)
-- [`1.15.1-trusty`, `1.15-trusty` (*1.15/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.15/trusty)
-- [`1.14.2`, `1.14` (*1.14/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.14)
-- [`1.14.2-trusty`, `1.14-trusty` (*1.14/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/1.14/trusty)
+- [`1.18.0`, `1.18`, `latest`  (*1.18/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master)
+- [`1.18.0-trusty`, `1.18-trusty`, `trusty`  (*1.18/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/trusty)
+- [`1.17.0`, `1.17` (*1.17/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.17)
+- [`1.17.0-trusty`, `1.17-trusty` (*1.17/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.17/trusty)
+- [`1.16.0`, `1.16` (*1.16/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.16)
+- [`1.16.0-trusty`, `1.16-trusty` (*1.16/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.16/trusty)
+- [`1.15.1`, `1.15` (*1.15/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.15)
+- [`1.15.1-trusty`, `1.15-trusty` (*1.15/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.15/trusty)
+- [`1.14.2`, `1.14` (*1.14/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.14)
+- [`1.14.2-trusty`, `1.14-trusty` (*1.14/trusty/Dockerfile*)](https://github.com/peter-evans/osrm-backend-docker/tree/master/archive/1.14/trusty)
 
 For earlier versions see [releases](https://github.com/peter-evans/osrm-backend-docker/releases) and the available [tags on Docker Hub](https://hub.docker.com/r/peterevans/osrm-backend/tags/).
 
