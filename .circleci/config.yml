@@ -90,7 +90,7 @@ jobs:
             MINOR_VERSION=$(echo $CIRCLE_TAG | sed -n "s/^v\([0-9]*.[0-9]*\).[0-9]*$/\1/p")
             if [[ ${#MINOR_VERSION} -gt 0 ]]; then
               docker tag $IMAGE_NAME:trusty $IMAGE_NAME:$MINOR_VERSION-trusty
-              docker push $IMAGE_NAME:$MINOR_VERSION-trusty            
+              docker push $IMAGE_NAME:$MINOR_VERSION-trusty
               docker tag $IMAGE_NAME:latest $IMAGE_NAME:$MINOR_VERSION
               docker push $IMAGE_NAME:$MINOR_VERSION
             fi
