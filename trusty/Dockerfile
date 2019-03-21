@@ -1,6 +1,13 @@
 FROM ubuntu:trusty
 
-MAINTAINER rollbrettler <rollbrettler@googlemail.com>
+LABEL \
+  maintainer="Peter Evans <mail@peterevans.dev>" \
+  org.opencontainers.image.title="osrm-backend:trusty" \
+  org.opencontainers.image.description="Docker image for the Open Source Routing Machine (OSRM) osrm-backend." \
+  org.opencontainers.image.authors="rollbrettler <rollbrettler@googlemail.com>, Peter Evans <mail@peterevans.dev>" \
+  org.opencontainers.image.url="https://github.com/peter-evans/osrm-backend-docker" \
+  org.opencontainers.image.vendor="https://peterevans.dev" \
+  org.opencontainers.image.licenses="MIT"
 
 ENV OSRM_VERSION 5.22.0
 
